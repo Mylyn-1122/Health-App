@@ -6,6 +6,7 @@ import 'past_symptoms_screen.dart';
 
 import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 
+
 class HomePage extends StatelessWidget {
   const HomePage({super.key, required this.user});
   final User user;
@@ -47,29 +48,34 @@ class HomePage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(user.displayName != null ? "Welcome ${user.displayName!}" : "Welcome. You can add your name in the profile page."),
-            const SizedBox(height: 75,)
-            ,
+            Text(user.displayName != null
+                ? "Welcome ${user.displayName!}"
+                : "Welcome. You can add your name in the profile page."),
+            const SizedBox(
+              height: 75,
+            ),
             ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) =>  SymptomPage(user:user)));
+                      builder: (context) => SymptomPage(user: user)));
                 },
-                style: ElevatedButton.styleFrom(padding: const EdgeInsets.all(50)),
-                child: const Text("Add Symptom",)),
+                style:
+                    ElevatedButton.styleFrom(padding: const EdgeInsets.all(50)),
+                child: const Text(
+                  "Add Symptom",
+                )),
             const SizedBox(
               height: 75,
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).push(MaterialPageRoute(
-                    builder: (context) =>  PastSymptomsPage(user:user)));
+                    builder: (context) => PastSymptomsPage(user: user)));
               },
-              style: ElevatedButton.styleFrom(padding: const EdgeInsets.all(50)),
+              style:
+                  ElevatedButton.styleFrom(padding: const EdgeInsets.all(50)),
               child: const Text("Past Symptoms"),
             ),
-            
-            
           ],
         ),
       ),
