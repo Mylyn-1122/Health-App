@@ -1,0 +1,36 @@
+name: health_app
+description: A new Flutter project.
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: '>=3.1.3 <4.0.0'
+
+dependencies:
+  cloud_firestore: ^4.14.0
+  dart_openai: ^4.0.0
+  envied: ^0.5.1
+  firebase_auth: ^4.16.0
+  firebase_core: ^2.24.2
+  firebase_ui_auth: ^1.10.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  build_runner: ^2.4.6
+  envied_generator: ^0.5.1
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: assets/image/icon.jpg
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true 
+  assets:     
+    - assets/image/body.png
